@@ -1,26 +1,20 @@
 " general
-syntax enable
 set nu
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 let mapleader = ','
 filetype indent on
 set smartindent
 set filetype=html
+set backspace=indent,eol,start
+
+" colors
+syntax enable
+colorscheme monokai
+set termguicolors
+set t_Co=256
 
 " custom mappings
 map <leader>t :terminal<CR>
-
-
-" colors
-try
-    " Solarized options
-    let g:solarized_term = 1
-    colorscheme solarized
-catch
-endtry
-set background=dark
-set t_Co=256
-let g:rehash256 = 1
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -77,3 +71,10 @@ let g:airline_theme = 'base16_solarized'
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
+
+" Automatically add closing braces
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap [<CR> [<CR>]<Esc>ko
+inoremap (<CR> (<CR>)<Esc>ko
+
+
