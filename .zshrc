@@ -9,7 +9,7 @@
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="jnrowe"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,3 +98,11 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias g="cd ~/go/src/github.com/jeryanders"
+alias dp="cd ~/Dropbox/workspace"
+
+export SECRETS="~/.presence"
+export KEYPATH="~/privkey.pem"
+export ENVIRONMENT="Development"
+
+export GOPATH="/home/jeryanders/go"
+export PATH="$PATH:$GOPATH/bin"

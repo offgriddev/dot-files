@@ -9,8 +9,8 @@ set backspace=indent,eol,start
 
 " colors
 syntax enable
-colorscheme monokai
-set termguicolors
+colorscheme tokyo-metro 
+" set termguicolors
 set t_Co=256
 
 " custom mappings
@@ -24,8 +24,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'nsf/gocode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplete.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'koirand/tokyo-metro.vim'
 
 call plug#end()
 
@@ -65,9 +67,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '>'
-let g:airline_theme = 'base16_solarized'
+let g:airline_powerline_fonts = 1
+" powerline symbols
+" sudo apt install fonts-powerline
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = '☰'
+" let g:airline_symbols.maxlinenr = ''
+let g:airline_theme = 'powerlineish'
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
@@ -77,4 +88,5 @@ inoremap {<CR> {<CR>}<Esc>ko
 inoremap [<CR> [<CR>]<Esc>ko
 inoremap (<CR> (<CR>)<Esc>ko
 
-
+" CtrlP
+let g:ctrlo_working_path_mode='a'
