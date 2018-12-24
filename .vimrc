@@ -39,6 +39,11 @@ Plug 'crusoexia/vim-monokai'
 Plug 'othree/yajs.vim'
 Plug 'othree/es.next.syntax.vim'
 Plug 'tomasr/molokai'
+Plug 'mechatroner/rainbow_csv'
+Plug 'elzr/vim-json'
+Plug 'mattn/emmet-vim'
+" Plug 'grassdog/tagman.vim'
+" Plug 'chrisbra/csv.vim'
 " Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
