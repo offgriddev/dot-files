@@ -1,6 +1,6 @@
 " general
 set nu
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let mapleader = ','
 filetype indent on
 set smartindent
@@ -9,9 +9,13 @@ set backspace=indent,eol,start
 
 " colors
 syntax enable
-colorscheme tokyo-metro 
+" syntax on
+" colorscheme tokyo-metro 
+colorscheme molokai
+let g:rehash256 = 1
+let g:molokai_original = 1
 " set termguicolors
-set t_Co=256
+" set t_Co=256
 
 " custom mappings
 map <leader>t :terminal<CR>
@@ -20,14 +24,22 @@ map <leader>t :terminal<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'nsf/gocode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neocomplete.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'koirand/tokyo-metro.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+Plug 'crusoexia/vim-monokai'
+Plug 'othree/yajs.vim'
+Plug 'othree/es.next.syntax.vim'
+Plug 'tomasr/molokai'
+" Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -74,14 +86,15 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.linenr = '☰'
-" let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols_branch = ''
+let g:airline_symbols_readonly = ''
+let g:airline_symbols_linenr = '☰'
+let g:airline_symbols_maxlinenr = ''
 let g:airline_theme = 'powerlineish'
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
+" autocmd FileType javascript NeoCompleteLock
 
 " Automatically add closing braces
 inoremap {<CR> {<CR>}<Esc>ko
@@ -90,3 +103,16 @@ inoremap (<CR> (<CR>)<Esc>ko
 
 " CtrlP
 let g:ctrlo_working_path_mode='a'
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:javascript_plugin_jsdoc = 1
+
