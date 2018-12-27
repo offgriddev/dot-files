@@ -11,7 +11,7 @@ set backspace=indent,eol,start
 syntax enable
 " syntax on
 " colorscheme tokyo-metro 
-colorscheme molokai
+colorscheme molokai 
 let g:rehash256 = 1
 let g:molokai_original = 1
 " set termguicolors
@@ -42,6 +42,7 @@ Plug 'tomasr/molokai'
 Plug 'mechatroner/rainbow_csv'
 Plug 'elzr/vim-json'
 Plug 'mattn/emmet-vim'
+Plug 'zivyangll/git-blame.vim'
 " Plug 'grassdog/tagman.vim'
 " Plug 'chrisbra/csv.vim'
 " Plug 'Valloric/YouCompleteMe'
@@ -121,3 +122,5 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:javascript_plugin_jsdoc = 1
 
+" GitBlame
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
