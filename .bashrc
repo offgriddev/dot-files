@@ -1,6 +1,10 @@
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[[ $TERM != "screen-256color" ]] && exec tmux
+#[[ $TERM != "screen-256color" ]] && exec tmux
 
+source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette_osx.sh"
+
+alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim .'
+alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim .'
 alias ls='ls -AG'
 alias l='ls -AG@ou'
 alias ..='cd ..'
@@ -30,6 +34,9 @@ export NVM_DIR="$HOME/.nvm"
 set editing-mode vi
 set -o vi
 #bind -P
+
+# Auto Change Dir
+shopt -q -s autocd
 
 # Correct dir spellings
 shopt -q -s cdspell
