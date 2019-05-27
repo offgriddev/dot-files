@@ -19,7 +19,7 @@ alias jui='cd ~/source/racker/janus-azure-ui'
 # Default to a full-featured prompt, but use PROMPT_MODE if that's set
 # prompt "${PROMPT_MODE:-on}"
 
-PS1="\n\[\e[0;1;37;44m\]-- \w \[\e[0;37m\]\n$ "
+PS1='\n$(__git_ps1 " \e[0;1;33m\](%s)\e[0;1m\] -- ")\[\e[0;36m\]\w \[\e[m\]\n$ '
 #PS1="\[\033[00;40m\]({ \u, \h })\[\033[00m\] \[\033[04;36m\]\w\[\033[00m\]  "
 #PS1="\u@\h:\w\$ "
 
