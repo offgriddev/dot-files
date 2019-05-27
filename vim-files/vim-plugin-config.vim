@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'Shougo/denite.nvim'
 Plug 'rhysd/clever-f.vim', {'merged' : 0}
 Plug 'Raimondi/delimitMate'
+Plug 'terryma/vim-multiple-cursors'
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
