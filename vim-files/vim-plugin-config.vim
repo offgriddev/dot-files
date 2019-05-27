@@ -40,7 +40,7 @@ Plug 'carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'if': has('nvim') }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Terraform
-Plug 'ashivim/vim-terraform'
+Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 
 call plug#end()
