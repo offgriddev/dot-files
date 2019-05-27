@@ -3,27 +3,7 @@
 #[[ $TERM != "screen-256color" ]] && exec tmux
 
 GIT_PS1_SHOWDIRTYSTATE=1
-source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette_osx.sh"
-
-alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim .'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim .'
-alias ls='ls -AG'
-alias l='ls -AG@ou'
-alias ..='cd ..'
-alias ~='cd ~'
-alias ...='cd ../..'
-alias hrng='grep -Hrn'
-
-# repos
-alias japi='cd ~/source/racker/janus-azure'
-alias jui='cd ~/source/racker/janus-azure-ui'
-
-# Default to a full-featured prompt, but use PROMPT_MODE if that's set
-# prompt "${PROMPT_MODE:-on}"
-
 PS1='\n$(__git_ps1 " \e[0;1;33m\](%s)\e[0;1m\] -- ")\[\e[0;36m\]\w \[\e[m\]\n$ '
-#PS1="\[\033[00;40m\]({ \u, \h })\[\033[00m\] \[\033[04;36m\]\w\[\033[00m\]  "
-#PS1="\u@\h:\w\$ "
 
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:$HOME/Library/Python/2.7/bin"
