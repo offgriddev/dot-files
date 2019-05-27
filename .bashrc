@@ -1,6 +1,8 @@
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 #[[ $TERM != "screen-256color" ]] && exec tmux
 
+GIT_PS1_SHOWDIRTYSTATE=1
 source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 
 alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim .'

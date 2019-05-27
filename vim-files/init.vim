@@ -12,5 +12,3 @@ source $HOME/.config/nvim/lang-javascript.vim
 source $HOME/.config/nvim/denite-config.vim
 source $HOME/.config/nvim/vim-grepper-config.vim
 source $HOME/.config/nvim/vim-node-config.vim
-
-

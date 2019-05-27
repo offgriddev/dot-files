@@ -13,6 +13,7 @@ Plug 'neomake/neomake'
 Plug 'ervandew/supertab'
 Plug 'Shougo/denite.nvim'
 Plug 'rhysd/clever-f.vim', {'merged' : 0}
+Plug 'Raimondi/delimitMate'
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}

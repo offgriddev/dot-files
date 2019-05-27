@@ -1,6 +1,4 @@
 scriptencoding utf-8
-let g:vimfiler_as_default_explorer = 2
-
 let g:vimfiler_as_default_explorer = get(g:, 'vimfiler_as_default_explorer', 1)
 let g:vimfiler_restore_alternate_file = get(g:, 'vimfiler_restore_alternate_file', 1)
 let g:vimfiler_tree_indentation = get(g:, 'vimfiler_tree_indentation', 1)
@@ -19,22 +17,16 @@ let g:vimfiler_ignore_pattern = get(g:, 'vimfiler_ignore_pattern', [
       \ '^\.init\.vim-rplugin\~$',
       \ '^\.netrwhist$',
       \ '\.class$',
-      \ '^\.'
       \])
 
-if has('mac') 
-  let g:vimfiler_quick_look_command = 
-        \ get(g:, 'vimfiler_quick_look_command', 'qlmanage -p') 
-else 
-  let g:vimfiler_quick_look_command = 
-        \ get(g:, 'vimfiler_quick_look_command', 'gloobus-preview') 
-endif
+let g:vimfiler_quick_look_command = 
+      \ get(g:, 'vimfiler_quick_look_command', 'qlmanage -p') 
 
 "try
 call vimfiler#custom#profile('default', 'context', {
       \ 'explorer' : 1,
-      \ 'winwidth' : 25,
-      \ 'winminwidth' : 30,
+      \ 'winwidth' : 45,
+      \ 'winminwidth' : 45,
       \ 'toggle' : 1,
       \ 'auto_expand': 1,
       \ 'direction' : g:vimfiler_direction,
@@ -57,9 +49,6 @@ augroup vfinit
 augroup END
 
 function! s:vimfilerinit()
-  setl nonumber
-  setl norelativenumber
-
   silent! nunmap <buffer> <Space>
   silent! nunmap <buffer> <C-l>
   silent! nunmap <buffer> <C-j>
@@ -151,5 +140,6 @@ function! s:open_vimfiler() abort
   doautocmd WinEnter
 endfunction
 
-nnoremap <silent> <F3> :call <SID>open_vimfiler()<CR>
+nnoremap <leader>f :call <SID>open_vimfiler()<CR>
+cnoreabbrev gag GrepperAg
 " vim:set et sw=2:

@@ -5,16 +5,18 @@ set number relativenumber
 set termguicolors
 
 let mapleader = " "
-set mouse=nicr
+set mouse=nicra
 
 " [t or ]t for next and previous tab
 nnoremap <silent> [t :tabprevious<cr>
 nnoremap <silent> ]t :tabnext<cr>
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+nnoremap <silent> <Leader>J :exe "resize " . (winheight(0) * 5/4)<CR>
+nnoremap <silent> <Leader>K :exe "resize " . (winheight(0) * 4/5)<CR>
+nnoremap <silent> <Leader>L :exe "vertical resize " . (winwidth(0) * 5/4)<CR>
+nnoremap <silent> <Leader>H :exe "vertical resize " . (winwidth(0) * 4/5)<CR>
+
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
