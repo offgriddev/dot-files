@@ -43,4 +43,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 
+" Bash
+Plug 'WolfgangMehner/bash-support'
 call plug#end()
