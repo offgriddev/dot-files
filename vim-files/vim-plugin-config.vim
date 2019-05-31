@@ -15,6 +15,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'rhysd/clever-f.vim', {'merged' : 0}
 Plug 'Raimondi/delimitMate'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mhinz/vim-startify'
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
@@ -49,7 +50,7 @@ Plug 'juliosueiras/vim-terraform-completion'
 Plug 'WolfgangMehner/bash-support'
 
 " Yarn
-Plug 'Plug trkw/yarn.vim'
+Plug 'trkw/yarn.vim'
 Plug 'vim-scripts/npm.vim'
 
 call plug#end()
