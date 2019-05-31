@@ -21,4 +21,4 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
-set tabstop=2 softtabstop=0 noexpandtab
+set shiftwidth=2 softtabstop=2 expandtab tabstop=2

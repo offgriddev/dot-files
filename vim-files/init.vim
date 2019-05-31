@@ -15,3 +15,4 @@ source $HOME/.config/nvim/vim-node-config.vim
 source $HOME/.config/nvim/vim-go-config.vim
 source $HOME/.config/nvim/terraform-config.vim
 source $HOME/.config/nvim/vim-multiple-cursor-config.vim
+source $HOME/.config/nvim/bash-config.vim

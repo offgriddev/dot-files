@@ -36,6 +36,7 @@ Plug 'othree/javascript-libraries-syntax.vim', { 'on_ft': ['javascript', 'coffee
 Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'if': has('nvim') }
+Plug 'othree/es.next.syntax.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -46,4 +47,9 @@ Plug 'juliosueiras/vim-terraform-completion'
 
 " Bash
 Plug 'WolfgangMehner/bash-support'
+
+" Yarn
+Plug 'Plug trkw/yarn.vim'
+Plug 'vim-scripts/npm.vim'
+
 call plug#end()
