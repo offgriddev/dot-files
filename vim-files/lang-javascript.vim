@@ -12,6 +12,11 @@ let g:neomake_javascript_eslint_maker =  {
 " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " autocmd FocusGained * call <SID>checktime_if_javascript()
 
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+let g:tern_show_argument_hints='on_hold'
+let g:tern_map_keys=1
 
 nnoremap <silent><buffer> <F4> :ImportJSWord<CR>
 nnoremap <silent><buffer> <Leader>ji :ImportJSWord<CR>

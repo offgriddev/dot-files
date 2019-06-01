@@ -21,4 +21,5 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
+let g:deoplete#enable_at_startup = 1
 set shiftwidth=2 softtabstop=2 expandtab tabstop=2
