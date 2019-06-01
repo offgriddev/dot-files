@@ -45,6 +45,10 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Terraform
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
+Plug 'hashivim/vim-hashicorp-tools'
+
+" Ack
+Plug 'mileszs/ack.vim'
 
 " Bash
 Plug 'WolfgangMehner/bash-support'
@@ -53,4 +57,17 @@ Plug 'WolfgangMehner/bash-support'
 Plug 'trkw/yarn.vim'
 Plug 'vim-scripts/npm.vim'
 
+" Docker
+Plug 'ekalinin/Dockerfile.vim'
+
+" JSON
+Plug 'elzr/vim-json'
+
+" TMUX
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux'
+
+" TOML
+Plug 'cespare/vim-toml'
 call plug#end()
