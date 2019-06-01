@@ -12,7 +12,7 @@ alias ..='cd ..'
 alias ~='cd ~'
 alias ...='cd ../..'
 alias hrng='grep -Hrn'
-alias hack="./$SCRIPT_PATH/start_hack_session.sh"
+alias hack="sh $SCRIPT_PATH/start_hack_session.sh"
 
 # repos
 alias japi='cd ~/source/racker/janus-azure'
