@@ -12,12 +12,27 @@ alias ..='cd ..'
 alias ~='cd ~'
 alias ...='cd ../..'
 alias hrng='grep -Hrn'
-alias hack="sh $SCRIPT_PATH/start_hack_session.sh"
+alias work_hack="sh $SCRIPT_PATH/work_hack_session.sh"
+alias home_hack="sh $SCRIPT_PATH/home_hack_session.sh"
 
 # repos
 alias japi='cd ~/source/racker/janus-azure'
 alias jui='cd ~/source/racker/janus-azure-ui'
 
+startSession() {
+  if [ -z $1 ]; then
+    echo 'Specify context'
+    return 1;
+  fi
+
+  if [ $1 == 'home' ]; then
+    home_hack;
+  fi
+
+  if [ $1 == 'work' ]; then
+    work_hack;
+  fi
+}
 # Default to a full-featured prompt, but use PROMPT_MODE if that's set
 # prompt "${PROMPT_MODE:-on}"
 

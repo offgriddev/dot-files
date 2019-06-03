@@ -11,7 +11,7 @@ let g:neomake_javascript_eslint_maker =  {
 " autocmd User NeomakeFinished call <SID>checktime_if_javascript()
 " autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " autocmd FocusGained * call <SID>checktime_if_javascript()
-
+let g:syntastic_javascript_checkers = ['eslint']
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " autocmd FileType javascript setlocal omnifunc=tern#Complete
 
