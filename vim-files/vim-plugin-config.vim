@@ -6,7 +6,8 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim',{'merged' : 0, 'loadconf' : 1 , 'loadconf_before' : 1, 'on_cmd' : ['VimFiler', 'VimFilerBufferDir']}
 Plug 'Shougo/vimproc.vim', {'build' : [(executable('gmake') ? 'gmake' : 'make')]} " https://teratail.com/questions/168402
 Plug 'vim-airline/vim-airline'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'mhinz/vim-grepper', { 'on_cmd' : 'Grepper','loadconf' : 1}
 Plug 'kien/ctrlp.vim'
 Plug 'neomake/neomake'
@@ -25,7 +26,7 @@ Plug 'airblade/vim-gitgutter',   { 'merged' : 0}
 Plug 'lambdalisue/gina.vim', { 'on_cmd' : 'Gina'}
 Plug 'tpope/vim-dispatch', { 'merged' : 0}
 Plug 'lambdalisue/vim-gita', { 'on_cmd' : 'Gita'}
- 
+
 " JavaScript
 Plug 'Galooshi/vim-import-js', { 'on_ft': 'javascript', 'build' : 'npm install -g import-js' }
 Plug 'heavenshell/vim-jsdoc', { 'on_cmd': 'JsDoc' }
