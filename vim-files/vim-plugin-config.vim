@@ -6,7 +6,6 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim',{'merged' : 0, 'loadconf' : 1 , 'loadconf_before' : 1, 'on_cmd' : ['VimFiler', 'VimFilerBufferDir']}
 Plug 'Shougo/vimproc.vim', {'build' : [(executable('gmake') ? 'gmake' : 'make')]} " https://teratail.com/questions/168402
 Plug 'vim-airline/vim-airline'
-" Plug 'vim-syntastic/syntastic'
 Plug 'w0rp/ale'
 Plug 'mhinz/vim-grepper', { 'on_cmd' : 'Grepper','loadconf' : 1}
 Plug 'kien/ctrlp.vim'
@@ -18,6 +17,9 @@ Plug 'Raimondi/delimitMate'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'wincent/command-t', {
+    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    \ }
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
@@ -40,6 +42,7 @@ Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'if': has('nvim') }
 Plug 'othree/es.next.syntax.vim'
+Plug 'mattn/emmet-vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
