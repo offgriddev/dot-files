@@ -42,7 +42,18 @@ Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'if': has('nvim') }
 Plug 'othree/es.next.syntax.vim'
+
+" HTML5
 Plug 'mattn/emmet-vim'
+Plug 'othree/html5.vim'
+
+" CSS
+Plug 'hail2u/vim-css3-syntax'
+Plug 'groenewege/vim-less'
+Plug 'skammer/vim-css-color'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
