@@ -42,6 +42,9 @@ Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
 Plug 'carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'if': has('nvim') }
 Plug 'othree/es.next.syntax.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'isruslan/vim-es6'
 
 " HTML5
 Plug 'mattn/emmet-vim'
@@ -50,7 +53,8 @@ Plug 'othree/html5.vim'
 " CSS
 Plug 'hail2u/vim-css3-syntax'
 Plug 'groenewege/vim-less'
-Plug 'skammer/vim-css-color'
+" Plug 'skammer/vim-css-color'
+Plug 'ap/vim-css-color'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
