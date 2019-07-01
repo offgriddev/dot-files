@@ -1,14 +1,14 @@
 let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 10
-set omnifunc=ale#completion#OmniFunc
+" set omnifunc=ale#completion#OmniFunc
 let b:ale_fixers = {
 			\'*': ['remove_trailing_lines', 'trim_whitespace'],
 			\'javascript': ['eslint'],
 			\}
 
-call deoplete#custom#option('sources', {
-			\ '_': ['ale'],
-			\})
+"call deoplete#custom#option('sources', {
+""			\ '_': ['ale'],
+""			\})
 
 
 let g:airline#extensions#ale#enabled = 1
