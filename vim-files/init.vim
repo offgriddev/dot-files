@@ -1,11 +1,16 @@
 source $HOME/.config/nvim/core.vim
 source $HOME/.config/nvim/vim-plugin-config.vim
 source $HOME/.config/nvim/unite-config.vim
-source $HOME/.config/nvim/vim-filer-config.vim
+" source $HOME/.config/nvim/vim-filer-config.vim
 source $HOME/.config/nvim/vim-airline-config.vim
 source $HOME/.config/nvim/ale.vim
 " source $HOME/.config/nvim/syntastic-config.vim
-source $HOME/.config/nvim/deoplete-config.vim
+if has('nvim')
+  source $HOME/.config/nvim/deoplete-config.vim
+endif
+source $HOME/.config/nvim/defx.vim
+source $HOME/.config/nvim/defx-git.vim
+source $HOME/.config/nvim/defx-icons.vim
 source $HOME/.config/nvim/ctrlp-config.vim
 source $HOME/.config/nvim/neomake-config.vim
 source $HOME/.config/nvim/supertab-config.vim
@@ -17,3 +22,4 @@ source $HOME/.config/nvim/vim-node-config.vim
 source $HOME/.config/nvim/terraform-config.vim
 source $HOME/.config/nvim/vim-multiple-cursor-config.vim
 source $HOME/.config/nvim/bash-config.vim
+source $HOME/.config/nvim/omnisharp-config.vim

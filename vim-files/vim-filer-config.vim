@@ -19,8 +19,8 @@ let g:vimfiler_ignore_pattern = get(g:, 'vimfiler_ignore_pattern', [
       \ '\.class$',
       \])
 
-let g:vimfiler_quick_look_command = 
-      \ get(g:, 'vimfiler_quick_look_command', 'qlmanage -p') 
+let g:vimfiler_quick_look_command =
+      \ get(g:, 'vimfiler_quick_look_command', 'qlmanage -p')
 
 "try
 call vimfiler#custom#profile('default', 'context', {
@@ -140,6 +140,4 @@ function! s:open_vimfiler() abort
   doautocmd WinEnter
 endfunction
 
-nnoremap <leader>f :call <SID>open_vimfiler()<CR>
-cnoreabbrev gag GrepperAg
 " vim:set et sw=2:

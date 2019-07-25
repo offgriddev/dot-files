@@ -1,9 +1,26 @@
 call plug#begin()
 " Core
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'kristijanhusak/defx-git'
+Plug 'kristijanhusak/defx-icons'
+
 Plug 'morhetz/gruvbox'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim',{'merged' : 0, 'loadconf' : 1 , 'loadconf_before' : 1, 'on_cmd' : ['VimFiler', 'VimFilerBufferDir']}
+
+if has('nvim')
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 Plug 'Shougo/vimproc.vim', {'build' : [(executable('gmake') ? 'gmake' : 'make')]} " https://teratail.com/questions/168402
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
@@ -17,9 +34,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'wincent/command-t', {
-    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-    \ }
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
@@ -90,4 +104,8 @@ Plug 'tmux-plugins/vim-tmux'
 
 " TOML
 Plug 'cespare/vim-toml'
+
+" .NET
+Plug 'OmniSharp/omnisharp-vim'
+
 call plug#end()

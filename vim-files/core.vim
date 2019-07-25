@@ -2,7 +2,7 @@ filetype plugin indent on
 syntax enable
 colorscheme gruvbox
 set number relativenumber
-set termguicolors
+" set termguicolors
 
 let mapleader = " "
 set mouse=nicra
@@ -28,3 +28,5 @@ set shiftwidth=2 softtabstop=2 expandtab tabstop=2
 " strip whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+
+cnoreabbrev gag GrepperAg
