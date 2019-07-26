@@ -54,8 +54,7 @@ nnoremap <F2> :OmniSharpRename<CR>
 command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 
 nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
-
-" Start the omnisharp server for the current solution
+nnoremap <Leader>pv :OmniSharpPreviewImplementation<CR>
 nnoremap <Leader>ss :OmniSharpStartServer<CR>
 nnoremap <Leader>sp :OmniSharpStopServer<CR>
 nnoremap <Leader>rs :OmniSharpRestartServer<CR>

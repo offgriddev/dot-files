@@ -22,8 +22,13 @@ noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
 set switchbuf=useopen
+
+" Buffers
 nnoremap <silent> <Leader>nb :sbnext<CR>
 nnoremap <silent> <Leader>pb :sbprevious<CR>
+
+" Tabs
+nnoremap <C-T> :tabnew<CR>
 
 let g:deoplete#enable_at_startup = 1
 set shiftwidth=2 softtabstop=2 expandtab tabstop=2
