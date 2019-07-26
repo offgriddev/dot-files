@@ -3,10 +3,12 @@ function! s:defx_my_settings() abort
   " Define mappings
   " nnoremap <silent><buffer><expr> <CR>
   " "\ defx#do_action('open')
- nnoremap <silent><buffer><expr> <CR>
-      \ defx#is_directory() ?
-      \ defx#do_action('open') :
-      \ defx#do_action('multi', ['drop', 'quit'])
+  " nnoremap <silent><buffer><expr> <CR>
+  "     \ defx#is_directory() ?
+  "     \ defx#do_action('open') :
+  "     \ defx#do_action('multi', ['drop', 'quit'])
+  nnoremap <silent><buffer><expr> <CR>
+  \ defx#do_action('multi', [ 'drop' ])
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
@@ -69,6 +71,7 @@ function! s:defx_my_settings() abort
 endfunction
 
 nnoremap <leader>f :Defx -split=vertical -winwidth=70 -direction=topleft<CR>
+nnoremap <leader>t :tabv <CR>
 
 call defx#custom#option('_', {
       \ 'columns': 'mark:indent:git:icons:filename:type:size:time',

@@ -1,8 +1,10 @@
 let b:ale_fixers = {
 			\'*': ['remove_trailing_lines', 'trim_whitespace'],
 			\'javascript': ['eslint'],
-      \ 'cs': ['OmniSharp']
 			\}
+let g:ale_linters = {
+      \'cs': ['OmniSharp']
+      \}
 
 let g:airline#extensions#ale#enabled = 1
 set omnifunc=ale#completion#OmniFunc
@@ -32,3 +34,4 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_open_list = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_enter = 1

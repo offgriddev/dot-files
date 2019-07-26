@@ -107,5 +107,9 @@ Plug 'cespare/vim-toml'
 
 " .NET
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'SirVer/ultisnips'
+
+" Snippets
+Plug 'honza/vim-snippets'
 
 call plug#end()

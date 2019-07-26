@@ -1,17 +1,18 @@
 let g:OmniSharp_server_stdio = 0
 let g:OmniSharp_server_use_mono = 0
 let g:OmniSharp_timeout = 5
-" set completeopt=longest,menuone,preview
+set completeopt=longest,menuone,preview
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_loglevel = 'debug'
-let g:OmniSharp_port = 2000
-let g:OmniSharp_lookup_metadata = 1
+" let g:OmniSharp_port = 2000
+let g:OmniSharp_lookup_metadata = 0
 let g:omnicomplete_fetch_full_documentation = 0
 let g:OmniSharp_highlight_types = 2
+let g:OmniSharp_server_stdio_quickload = 0
+
 filetype indent plugin on
 
 autocmd FileType cs setlocal shiftwidth=4 softtabstop=4 expandtab tabstop=4
-" let g:OmniSharp_server_path = '/Users/atomdata/.omnisharp/omnisharp-roslyn/OmniSharp.exe'
 augroup omnisharp_commands
   autocmd!
 
@@ -57,3 +58,10 @@ nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
 " Start the omnisharp server for the current solution
 nnoremap <Leader>ss :OmniSharpStartServer<CR>
 nnoremap <Leader>sp :OmniSharpStopServer<CR>
+nnoremap <Leader>rs :OmniSharpRestartServer<CR>
+
+let g:OmniSharp_want_snippet=1
+" let g:OmniSharp_server_ports = {
+"   \ '~/source/racker/janus-azure-billing-functions/Janus.Azure.Billing.Functions.sln': 2003,
+"   \ '~/source/racker/mscloud-billing/Rackspace-Azure-Billing.sln': 2004,
+"   \ }
