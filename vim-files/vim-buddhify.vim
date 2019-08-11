@@ -6,11 +6,8 @@ let g:buddha = [
       \ '   `--..__`--/__/  \--`__..--`',
       \ '  ``--..__`_(<_   _/)_`__..--``',
       \ ' ---...___(__\_\_|_/__)___...---',
-      \ '',
       \ ]
 
-
-"let g:buddha_quotes = [
 let g:startify_custom_header_quotes = [
       \ ['The good renounce (attachment for) everything. ', 'The virtuous do not prattle with a yearning for pleasures. ', 'The wise show no elation or depression ', 'when touched by happiness or sorrow. ', '', 'Dhammapada 83'],
       \ ['Should a person commit evil, ', 'let him not do it again and again. ', 'Let him not find pleasure therein, ', 'for painful is the accumulation of evil. ', '', 'Dhammapada 117'],

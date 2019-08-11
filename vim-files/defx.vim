@@ -8,7 +8,7 @@ function! s:defx_my_settings() abort
   "     \ defx#do_action('open') :
   "     \ defx#do_action('multi', ['drop', 'quit'])
   nnoremap <silent><buffer><expr> <CR>
-  \ defx#do_action('multi', [ 'drop' ])
+  \ defx#do_action('drop')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
@@ -70,7 +70,7 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
 endfunction
 
-nnoremap <leader>f :Defx -split=vertical -winwidth=70 -direction=topleft<CR>
+nnoremap <leader>df :Defx -split=vertical -winwidth=70 -direction=topleft<CR>
 nnoremap <leader>t :tabv <CR>
 
 call defx#custom#option('_', {
