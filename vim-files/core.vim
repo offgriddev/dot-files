@@ -28,14 +28,11 @@ nnoremap <silent> <Leader>nb :sbnext<CR>
 nnoremap <silent> <Leader>pb :sbprevious<CR>
 
 " Tabs
-nnoremap <C-T> :tabnew<CR>
+nnoremap <Leader>T :tabnew<CR>
 
 let g:deoplete#enable_at_startup = 1
 set shiftwidth=2 softtabstop=2 expandtab tabstop=2
 
-
 " strip whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
-
-cnoreabbrev gag GrepperAg

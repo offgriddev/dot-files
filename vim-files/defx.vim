@@ -71,7 +71,6 @@ function! s:defx_my_settings() abort
 endfunction
 
 nnoremap <leader>df :Defx -split=vertical -winwidth=70 -direction=topleft<CR>
-nnoremap <leader>t :tabv <CR>
 
 call defx#custom#option('_', {
       \ 'columns': 'mark:indent:git:icons:filename:type:size:time',

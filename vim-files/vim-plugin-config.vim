@@ -23,9 +23,6 @@ endif
 
 Plug 'Shougo/vimproc.vim', {'build' : [(executable('gmake') ? 'gmake' : 'make')]} " https://teratail.com/questions/168402
 Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
-Plug 'mhinz/vim-grepper', { 'on_cmd' : 'Grepper','loadconf' : 1}
-Plug 'kien/ctrlp.vim'
 Plug 'neomake/neomake'
 Plug 'ervandew/supertab'
 Plug 'Shougo/denite.nvim'
@@ -34,6 +31,14 @@ Plug 'Raimondi/delimitMate'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
+
+" linting
+Plug 'dense-analysis/ale'
+
+" Find / Replace
+Plug 'brooth/far.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'mhinz/vim-grepper', { 'on_cmd' : 'Grepper','loadconf' : 1}
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
