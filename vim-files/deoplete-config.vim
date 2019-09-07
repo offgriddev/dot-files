@@ -13,6 +13,10 @@ call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 call deoplete#custom#option('source', {
       \ '_': ['ale'],
       \ })
+" cs
+call deoplete#custom#option('sources', {
+     \ 'cs': ['omnisharp'],
+     \ })
 
 " sh
 call deoplete#custom#option('ignore_sources', {'sh': ['around', 'member', 'tag', 'syntax']})

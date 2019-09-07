@@ -7,8 +7,8 @@ let g:ale_linters = {
       \}
 
 let g:airline#extensions#ale#enabled = 1
-set omnifunc=ale#completion#OmniFunc
-let g:ale_completion_enabled = 1
+"set omnifunc=ale#completion#OmniFunc
+"let g:ale_completion_enabled = 1
 
 function! LinterStatus() abort
 	let l:counts = ale#statusline#Count(bufnr(''))
@@ -23,8 +23,14 @@ function! LinterStatus() abort
 				\)
 endfunction
 
-let g:ale_sign_warning = '🤔'
-let g:ale_sign_error = '❌'
+let g:ale_echo_msg_error_str = 'YOU WRECKED SOMETHING! %s'
+let g:ale_echo_msg_warning_str = 'You need to check something... %s'
+let g:ale_echo_msg_info_str = 'You may want to know... %s'
+"let g:ale_sign_warning = '🤔'
+"let g:ale_sign_error = '❌'
+let g:ale_set_signs = 1
+let g:airline#extensions#ale#warning_symbol = '🤔'
+let g:airline#extensions#ale#error_symbol = '❌'
 
 set statusline=%{LinterStatus()}
 

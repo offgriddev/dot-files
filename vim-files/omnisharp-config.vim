@@ -1,14 +1,14 @@
-let g:OmniSharp_server_stdio = 0
+let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_server_use_mono = 0
-let g:OmniSharp_timeout = 5
+"let g:OmniSharp_timeout = 5
 set completeopt=longest,menuone,preview
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_loglevel = 'debug'
 " let g:OmniSharp_port = 2000
-let g:OmniSharp_lookup_metadata = 0
-let g:omnicomplete_fetch_full_documentation = 0
+let g:OmniSharp_lookup_metadata = 1
+let g:omnicomplete_fetch_full_documentation = 1
 let g:OmniSharp_highlight_types = 2
-let g:OmniSharp_server_stdio_quickload = 0
+let g:OmniSharp_server_stdio_quickload = 1
 
 filetype indent plugin on
 

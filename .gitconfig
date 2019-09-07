@@ -1,0 +1,39 @@
+[user]
+	name = Jesse Anderson
+	email = jeryanders@gmail.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/jess4168/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	lol = log --graph --oneline --all
+  st = status --short --branch
+  stt = status
+  ci = commit
+  co = checkout
+  pr = pull --rebase
+  prom = pull --rebase origin master
+  ap = add -p
+  co- = checkout @{-1}
+  pprom = !"git co master && git pr && git co- && git prom"
+  df = diff --word-diff=plain --word-diff-regex=[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+
+  dc = diff --word-diff=plain --word-diff-regex=[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+ --cached
+  dcc = diff --cached
+  lg = log --graph --branches=* --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n 20
+  lb = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n 20
+  cb = rev-parse --abbrev-ref HEAD
+  head = rev-parse HEAD
+  pb = !"echo master"
+  pushup = !"git push --set-upstream origin `git cb`"
+[merge]
+	tool = vimdiff
+[color]
+	ui = auto
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
