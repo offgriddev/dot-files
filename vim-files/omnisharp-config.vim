@@ -6,6 +6,7 @@ let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_loglevel = 'debug'
 " let g:OmniSharp_port = 2000
 let g:OmniSharp_lookup_metadata = 1
+let g:OmniSharp_start_without_solution = 1
 let g:omnicomplete_fetch_full_documentation = 1
 let g:OmniSharp_highlight_types = 2
 let g:OmniSharp_server_stdio_quickload = 1

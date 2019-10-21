@@ -1,22 +1,4 @@
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_maker =  {
-      \ 'args': ['--format=compact'],
-      \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-      \   '%W%f: line %l\, col %c\, Warning - %m,%-G,%-G%*\d problems%#',
-      \ 'cwd': '%:p:h',
-      \ 'output_stream': 'stdout',
-      \ }
-" let g:neomake_javascript_eslint_args = ['-f', 'compact', '--fix']
-" autocmd!
-" autocmd User NeomakeFinished call <SID>checktime_if_javascript()
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FocusGained * call <SID>checktime_if_javascript()
-let g:syntastic_javascript_checkers = ['eslint']
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType javascript setlocal omnifunc=tern#Complete
-
-let g:tern_show_argument_hints='on_hold'
-let g:tern_map_keys=1
+let g:javascript_plugin_jsdoc = 1
 
 nnoremap <silent><buffer> <F4> :ImportJSWord<CR>
 nnoremap <silent><buffer> <Leader>ji :ImportJSWord<CR>
@@ -39,3 +21,22 @@ let g:jsdoc_underscore_private = 1
 
 " Enable to use ECMAScript6's Shorthand function, Arrow function.
 let g:jsdoc_enable_es6 = 1
+
+"autocmd User Node
+"  \ if &filetype == "javascript" |
+"  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
+"  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
+"  \ endif
+
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=2 cindent smartindent autoindent
+
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"

@@ -2,7 +2,13 @@ call plug#begin()
 " Core
 Plug 'morhetz/gruvbox'
 Plug 'Shougo/unite.vim'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 
 " NERDTree (i finally gave in)
 Plug 'scrooloose/nerdtree'
@@ -37,21 +43,21 @@ Plug 'tpope/vim-dispatch', { 'merged' : 0}
 Plug 'lambdalisue/vim-gita', { 'on_cmd' : 'Gita'}
 
 " JavaScript
-Plug 'Galooshi/vim-import-js', { 'on_ft': 'javascript', 'build' : 'npm install -g import-js' }
+" Plug 'Galooshi/vim-import-js', { 'on_ft': 'javascript', 'build' : 'npm install -g import-js' }
 Plug 'heavenshell/vim-jsdoc', { 'on_cmd': 'JsDoc' }
-Plug 'maksimr/vim-jsbeautify', { 'on_ft': 'javascript' }
-Plug 'mmalecki/vim-node.js', { 'on_ft': 'javascript' }
-Plug 'moll/vim-node', { 'on_ft': 'javascript' }
-Plug 'neoclide/vim-jsx-improve', { 'on_ft': 'javascript' }
-Plug 'othree/es.next.syntax.vim', { 'on_ft': 'javascript' }
-Plug 'othree/javascript-libraries-syntax.vim', { 'on_ft': ['javascript', 'coffee', 'ls', 'typescript'] }
+" Plug 'maksimr/vim-jsbeautify', { 'on_ft': 'javascript' }
+" Plug 'mmalecki/vim-node.js', { 'on_ft': 'javascript' }
+" Plug 'moll/vim-node', { 'on_ft': 'javascript' }
+" Plug 'neoclide/vim-jsx-improve', { 'on_ft': 'javascript' }
+" Plug 'othree/es.next.syntax.vim', { 'on_ft': 'javascript' }
+" Plug 'othree/javascript-libraries-syntax.vim', { 'on_ft': ['javascript', 'coffee', 'ls', 'typescript'] }
 Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
-Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
+" Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
 " Plug 'carlitux/deoplete-ternjs', { 'on_ft': ['javascript'], 'if': has('nvim') }
-Plug 'othree/es.next.syntax.vim'
+" Plug 'othree/es.next.syntax.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'isruslan/vim-es6'
+" Plug 'isruslan/vim-es6'
 
 " HTML5
 Plug 'mattn/emmet-vim'
