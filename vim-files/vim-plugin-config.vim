@@ -11,7 +11,6 @@ Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-" Plug 'ycm-core/YouCompleteMe'
 
 " NERDTree (i finally gave in)
 Plug 'scrooloose/nerdtree'
@@ -46,19 +45,16 @@ Plug 'tpope/vim-dispatch', { 'merged' : 0}
 Plug 'lambdalisue/vim-gita', { 'on_cmd' : 'Gita'}
 
 " JavaScript
-" Plug 'Galooshi/vim-import-js', { 'on_ft': 'javascript', 'build' : 'npm install -g import-js' }
 Plug 'heavenshell/vim-jsdoc', { 'on_cmd': 'JsDoc' }
-" Plug 'maksimr/vim-jsbeautify', { 'on_ft': 'javascript' }
 Plug 'mmalecki/vim-node.js', { 'on_ft': 'javascript' }
 Plug 'moll/vim-node', { 'on_ft': 'javascript' }
 " Plug 'neoclide/vim-jsx-improve', { 'on_ft': 'javascript' }
 Plug 'othree/es.next.syntax.vim', { 'on_ft': 'javascript' }
 Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
-" Plug 'ternjs/tern_for_vim', { 'on_ft': 'javascript', 'build' : 'npm install' }
 Plug 'othree/es.next.syntax.vim'
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
+Plug 'MaxMEllon/vim-jsx-pretty'
 
 " HTML5
 Plug 'mattn/emmet-vim'
@@ -67,7 +63,6 @@ Plug 'othree/html5.vim'
 " CSS
 Plug 'hail2u/vim-css3-syntax'
 Plug 'groenewege/vim-less'
-" Plug 'skammer/vim-css-color'
 Plug 'ap/vim-css-color'
 
 " Markdown
