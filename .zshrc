@@ -1,3 +1,7 @@
+export ZSH="/Users/jess4168/.oh-my-zsh"
+
+ZSH_THEME="gruvbox"
+SOLARIZED_THEME="dark"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -6,7 +10,7 @@ setopt appendhistory autocd beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/atomdata/.zshrc'
+zstyle :compinstall filename '/Users/jess4168/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -17,14 +21,17 @@ alias ls='ls -AG'
 alias l='ls -AG@ou'
 alias ..='cd ..'
 alias ~='cd ~'
+alias git='hub'
 alias ...='cd ../..'
 alias hrng='grep -Hrn'
 alias work_hack="sh $SCRIPT_PATH/work_hack_session.sh"
 alias home_hack="sh $SCRIPT_PATH/home_hack_session.sh"
+alias cut='gcut'
 
 # repos
 alias japi='cd ~/source/racker/janus-azure'
 alias jui='cd ~/source/racker/janus-azure-ui'
+alias godir='cd ~/source/go/src/github.com/jeryanders'
 
 export SCRIPT_PATH="$HOME/Documents/linux/dot-files/scripts"
 export GOPATH="$HOME/source/go"
@@ -39,7 +46,50 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export RACK_DIR="$HOME/source/Rack-SDK"
+plugins=(git)
+export SSLKEYLOGFILE=~/sslkeylog.log
 
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jess4168/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jess4168/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jess4168/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jess4168/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/llvm/lib"
+  export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+log () {
+  echo -e "${white}==> $@${reset}"
+}
+info () {
+  echo -e "${bold}${white}==> $@${reset}"
+}
+warn () {
+  echo -e "${bold}${yellow}==> $@${reset}"
+}
+error () {
+  echo -e "${bold}${red}$@${reset}"
+}
