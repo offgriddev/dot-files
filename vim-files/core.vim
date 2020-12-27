@@ -41,3 +41,4 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 
 set shiftwidth=2 softtabstop=2 expandtab tabstop=2
+let g:vim_markdown_folding_disabled = 1
