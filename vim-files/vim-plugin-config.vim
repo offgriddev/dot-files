@@ -1,40 +1,39 @@
 call plug#begin()
 " Core
 Plug 'morhetz/gruvbox'
-Plug 'Shougo/unite.vim'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
+" Plug 'Shougo/unite.vim'
+" Plug 'roxma/nvim-yarp'
+" if !has('nvim')
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'ncm2/ncm2'
+" Plug 'tpope/vim-surround'
 
 " Autocomplete
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+" Plug 'ncm2/ncm2-bufword'
+" Plug 'ncm2/ncm2-path'
+" Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 
 " NERDTree (i finally gave in)
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
-Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'kien/ctrlp.vim'
+Plug 'mhinz/vim-grepper', { 'on_cmd' : 'Grepper','loadconf' : 1}
 Plug 'Shougo/vimproc.vim', {'build' : [(executable('gmake') ? 'gmake' : 'make')]} " https://teratail.com/questions/168402
 Plug 'vim-airline/vim-airline'
 Plug 'neomake/neomake'
-Plug 'ervandew/supertab'
 Plug 'Shougo/denite.nvim'
 Plug 'rhysd/clever-f.vim', {'merged' : 0}
 Plug 'Raimondi/delimitMate'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'brooth/far.vim'
 
 " linting
 Plug 'dense-analysis/ale'
-
-" Find / Replace
-Plug 'brooth/far.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'mhinz/vim-grepper', { 'on_cmd' : 'Grepper','loadconf' : 1}
 
 " Git
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
@@ -47,10 +46,9 @@ Plug 'lambdalisue/vim-gita', { 'on_cmd' : 'Gita'}
 " JavaScript
 Plug 'heavenshell/vim-jsdoc', { 'on_cmd': 'JsDoc' }
 Plug 'mmalecki/vim-node.js', { 'on_ft': 'javascript' }
+Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'moll/vim-node', { 'on_ft': 'javascript' }
-" Plug 'neoclide/vim-jsx-improve', { 'on_ft': 'javascript' }
 Plug 'othree/es.next.syntax.vim', { 'on_ft': 'javascript' }
-Plug 'othree/yajs.vim', { 'on_ft': 'javascript' }
 Plug 'othree/es.next.syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'isruslan/vim-es6'
@@ -70,6 +68,7 @@ Plug 'plasticboy/vim-markdown'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 " Terraform
 Plug 'hashivim/vim-terraform'
@@ -101,8 +100,9 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'cespare/vim-toml'
 
 " .NET
-" Plug 'OmniSharp/omnisharp-vim'
-" Plug 'SirVer/ultisnips'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'SirVer/ultisnips'
+Plug 'OrangeT/vim-csharp'
 
 " Snippets
 Plug 'honza/vim-snippets'

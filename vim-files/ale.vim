@@ -3,7 +3,8 @@ let b:ale_fixers = {
 			\'javascript': ['eslint'],
 			\}
 let g:ale_linters = {
-      \'cs': ['OmniSharp']
+      \'cs': ['OmniSharp'],
+      \'cpp': ['clangd'],
       \}
 
 let g:airline#extensions#ale#enabled = 1
