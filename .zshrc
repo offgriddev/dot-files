@@ -1,4 +1,4 @@
-export ZSH="/Users/jess4168/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="gruvbox"
 SOLARIZED_THEME="dark"
@@ -10,7 +10,7 @@ setopt appendhistory autocd beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/jess4168/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -24,13 +24,9 @@ alias ~='cd ~'
 alias git='hub'
 alias ...='cd ../..'
 alias hrng='grep -Hrn'
-alias work_hack="sh $SCRIPT_PATH/work_hack_session.sh"
-alias home_hack="sh $SCRIPT_PATH/home_hack_session.sh"
 alias cut='gcut'
 
 # repos
-alias japi='cd ~/source/racker/janus-azure'
-alias jui='cd ~/source/racker/janus-azure-ui'
 alias godir='cd ~/source/go/src/github.com/jeryanders'
 
 export SCRIPT_PATH="$HOME/Documents/linux/dot-files/scripts"
@@ -52,14 +48,6 @@ export SSLKEYLOGFILE=~/sslkeylog.log
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else

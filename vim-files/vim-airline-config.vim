@@ -4,11 +4,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let g:Powerline_sybols = 'unicode'
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-"let g:airline#extensions#tabline#buffer_idx_format = {}
 for s:i in range(9)
-"call extend(g:airline#extensions#tabline#buffer_idx_format,
-"  \ {s:i : SpaceVim#api#import('messletters').bubble_num(s:i,
-"  \ g:spacevim_buffer_index_type). ' '})
 endfor
 unlet s:i
 "  let g:airline#extensions#tabline#buffer_idx_mode = 1

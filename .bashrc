@@ -12,27 +12,7 @@ alias ..='cd ..'
 alias ~='cd ~'
 alias ...='cd ../..'
 alias hrng='grep -Hrn'
-alias work_hack="sh $SCRIPT_PATH/work_hack_session.sh"
-alias home_hack="sh $SCRIPT_PATH/home_hack_session.sh"
 
-# repos
-alias japi='cd ~/source/racker/janus-azure'
-alias jui='cd ~/source/racker/janus-azure-ui'
-
-startSession() {
-  if [ -z $1 ]; then
-    echo 'Specify context'
-    return 1;
-  fi
-
-  if [ $1 == 'home' ]; then
-    home_hack;
-  fi
-
-  if [ $1 == 'work' ]; then
-    work_hack;
-  fi
-}
 # Default to a full-featured prompt, but use PROMPT_MODE if that's set
 # prompt "${PROMPT_MODE:-on}"
 
@@ -56,17 +36,17 @@ shopt -q -s cdspell
 # Make sure display get updated when terminal window get resized
 shopt -q -s checkwinsize
 
-# Turn on the extended pattern matching features 
+# Turn on the extended pattern matching features
 shopt -q -s extglob
 
 # Append rather than overwrite history on exit
 shopt -s histappend
 
 # Make multi-line commandsline in history
-shopt -q -s cmdhist 
+shopt -q -s cmdhist
 
 # Get immediate notification of background job termination
-set -o notify 
+set -o notify
 
 # Disable [CTRL-D] which is used to exit the shell
 set -o ignoreeof

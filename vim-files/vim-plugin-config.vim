@@ -108,4 +108,7 @@ Plug 'OrangeT/vim-csharp'
 Plug 'honza/vim-snippets'
 
 Plug 'liuchengxu/vim-clap'
+
+Plug 'lervag/vimtex'
+Plug 'jparise/vim-graphql'
 call plug#end()
