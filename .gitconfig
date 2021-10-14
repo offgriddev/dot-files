@@ -18,10 +18,12 @@
   ci = commit
   co = checkout
   pr = pull --rebase
+  promain = pull --rebase origin main
   prom = pull --rebase origin master
   ap = add -p
   co- = checkout @{-1}
   pprom = !"git co master && git pr && git co- && git prom"
+  ppromain = !"git co main && git pr && git co- && git promain"
   df = diff --word-diff=plain --word-diff-regex=[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+
   dc = diff --word-diff=plain --word-diff-regex=[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+ --cached
   dcc = diff --cached
