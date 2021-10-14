@@ -21,9 +21,10 @@ cleanboot:
 	make install-everything
 
 revamp-vim:
+	rm -rf ~/.config/nvim/plugged
 	sh -c 'curl -fLo ~/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	mkdir -p ~/.config/nvim
 	cp -r vim-files/* ~/.config/nvim
-	nvim -c "execute 'PlugInstall | q'"
+	nvim -c "execute 'PlugInstall | qa'"
 	echo "\nViM Plugins installed"
