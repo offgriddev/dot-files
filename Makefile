@@ -26,3 +26,8 @@ revamp-vim:
 	cp -r vim-files/* ~/.config/nvim
 	nvim -c "execute 'PlugInstall | qa'"
 	nvim -c "execute 'CocInstall coc-json coc-tsserver coc-css coc-git coc-eslint coc-html coc-go coc-graphql coc-sh coc-swagger | qa'"
+
+refresh-plugins:
+	cp ./vim-files/vim-plugin-config.vim ~/.config/nvim
+	nvim -c "execute 'PlugInstall | qa'"
+	nvim
