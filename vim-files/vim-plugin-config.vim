@@ -52,6 +52,5 @@ Plug 'honza/vim-snippets'
 Plug 'liuchengxu/vim-clap'
 Plug 'lervag/vimtex'
 Plug 'jparise/vim-graphql'
-Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
