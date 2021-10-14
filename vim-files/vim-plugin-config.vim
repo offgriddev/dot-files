@@ -14,13 +14,10 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'brooth/far.vim'
-Plug 'dense-analysis/ale'
 Plug 'junegunn/gv.vim', { 'on_cmd' : ['GV']}
-Plug 'tpope/vim-fugitive',   { 'merged' : 0}
 Plug 'airblade/vim-gitgutter',   { 'merged' : 0}
 Plug 'lambdalisue/gina.vim', { 'on_cmd' : 'Gina'}
 Plug 'tpope/vim-dispatch', { 'merged' : 0}
-Plug 'lambdalisue/vim-gita', { 'on_cmd' : 'Gita'}
 Plug 'heavenshell/vim-jsdoc', { 'on_cmd': 'JsDoc' }
 Plug 'mmalecki/vim-node.js', { 'on_ft': 'javascript' }
 Plug 'martinda/Jenkinsfile-vim-syntax'
