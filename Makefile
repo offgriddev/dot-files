@@ -31,3 +31,7 @@ refresh-plugins:
 	cp ./vim-files/vim-plugin-config.vim ~/.config/nvim
 	nvim -c "execute 'PlugInstall | qa'"
 	nvim
+
+refresh-shell:
+	cp ./.zshrc ~/
+	source ~/.zshrc
