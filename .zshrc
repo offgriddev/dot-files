@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="gruvbox"
+# ZSH_THEME="gruvbox"
 SOLARIZED_THEME="dark"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -43,7 +43,7 @@ export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export RACK_DIR="$HOME/source/Rack-SDK"
-plugins=(git)
+plugins=(git zsh-vim-mode)
 export SSLKEYLOGFILE=~/sslkeylog.log
 
 source $ZSH/oh-my-zsh.sh
