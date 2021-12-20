@@ -28,7 +28,6 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
@@ -40,13 +39,17 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'cespare/vim-toml'
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'liuchengxu/vim-clap'
 Plug 'lervag/vimtex'
 Plug 'jparise/vim-graphql'
 Plug 'tpope/vim-fugitive'
-Plug 'delphinus/vim-firestore'
-Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'tpope/vim-dadbod'
+Plug 'Raimondi/delimitMate'
+Plug 'Numkil/ag.nvim'
+Plug 'dense-analysis/ale'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()
