@@ -1,6 +1,0 @@
-node_modules/
-**/*.js
-.nyc_output/
-coverage/
-.terraform*
-terraform/
